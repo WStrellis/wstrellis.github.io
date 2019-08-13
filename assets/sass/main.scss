@@ -640,7 +640,7 @@
 		position: relative;
 		padding: 4em 0 2em 0;
 		background-image: url('images/header.svg');
-		@include vendor('background-image', ('url("images/overlay.png")', 'url("images/header.svg")', 'linear-gradient(75deg, #FF7088 15%, #F2B69D 55%)'));
+		@include vendor('background-image', ('url("images/overlay.png")', 'url("images/header.svg")', 'linear-gradient(75deg, #153638 15%, #8EB4AA 55%)'));
 		background-color: #f08c89;
 		background-size: 100% 620%;
 		background-size: 128px 128px, 100% 620%, auto;
@@ -829,10 +829,14 @@
 /* Hero */
 
 	#hero {
-		position: relative;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 		color: #fff;
 		text-align: center;
-		z-index: 1;
+    z-index: 1;
+    min-height:  30vh;
 
 		h2 {
 			color: #fff;
@@ -1067,7 +1071,8 @@
 		/* Hero */
 
 			#hero {
-				padding: 3.5em 4em 0 4em;
+        padding: 3.5em 4em 0 4em;
+        min-height: 50vh;
 
 				h2 {
 					font-size: 2.75em;
@@ -1240,7 +1245,6 @@
 	}
 
 	@include breakpoint('<=mobile') {
-
 		/* Basic */
 
 			html, body {
@@ -1300,7 +1304,7 @@
 			}
 
 		/* Header */
-
+    
 			#logo {
 				position: relative;
 
@@ -1625,4 +1629,8 @@
 				}
 			}
 
-	}
+  }
+  
+#footer-wrapper div.row {
+  justify-content: center;
+}
